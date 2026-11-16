@@ -1,0 +1,828 @@
+JAVA PROGRAMME ASSIGNMENT
+
+NAME-YOGITA SHARMA
+ROLL NUMBER-2503810
+BRANCH-V.IT
+COURSE- OOP
+COURSE CODE-
+
+SECTION 1: BASIC PROGRAMS
+
+Q1.Read two integers and print their sum, difference, product, and quotient.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+ 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter two integers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println("Sum = " + (a + b));
+        System.out.println("Difference = "+ (a - b));
+        System.out.println("Product = " + (a * b));
+
+        if (b != 0) {
+            System.out.println("Quotient = "+ (double)a / b);
+        } else {
+            System.out.println("Division is not possible");
+        }
+    }
+}
+
+
+OUTPUT:
+
+Enter two integers: 20
+5
+Sum: 25
+Difference: 15
+Product: 100
+Quotient: 4.0
+
+Q2.Read the length and breadth of a rectangle and print its area and perimeter.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter length");
+        double length = sc.nextDouble();
+ 
+        System.out.print("Enter breadth");
+        double breadth = sc.nextDouble();
+
+        double area = length * breadth;
+        double perimeter = 2 * (length + breadth);
+
+        System.out.println("Area = " + area);
+        System.out.println("Perimeter = " + perimeter)
+   }
+}
+
+output:
+
+Enter length: 10
+Enter breadth: 5
+Area = 50.0
+Perimeter = 30.0
+
+Q3.Read the radius of a circle (double) and print its area and circumference.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius: ");
+        double radius = sc.nextDouble();
+
+        double area = Math.PI * radius * radius;
+        double circumference = 2 * Math.PI * radius;
+
+        System.out.println("Area = " + area);
+        System.out.println("Circumference = " + circumference);
+    }
+}
+
+OUTPUT:
+
+Enter radius: 7
+Area: 153.93804
+Circumference: 43.98229
+
+Q4.Read a name (String) and an age (int) and print: Hello Ravi, you are 18 years old.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+ 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name =  sc.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+ 
+        System.out.println("Hello " + name + ", you are " + age + "years old.");
+    }
+}
+
+OUTPUT:
+Sy
+Enter your name: Ravi
+Enter your age: 18
+Hello Ravi, you are 18 years old.
+
+Q5.Read the price and quantity of an item and print the total bill using printf with 2 decimal places.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Price: ");
+        double price = sc.nextDouble();
+
+        System.out.print("Enter quantity: ");
+        int quantity = sc.nextInt();
+
+        double totalBill = price * quantity;
+
+        System.out.printf("Total bill = %.2f%n", totalBill);
+    }
+}
+
+OUTPUT:
+
+Enter price: 50
+Enter quantity: 3
+Total bill: 150.0
+
+Q6.Read a temperature in Celsius and convert it into Fahrenheit.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter temperature in Celsius:");
+        double celsius = sc.nextDouble();
+
+        double fahrenheit = (celsius * 9/5) + 32;
+
+        System.out.println("Temperature in Fahrenheit = " + fahrenheit);
+    }
+}
+
+OUTPUT:
+
+Enter temperature in Celsius: 25
+Temperature in Fahrenheit: 77.0
+
+Q7.Read the marks of 3 subjects and print the total and average.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[]args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter mark of three subjects: ");
+        int m1 = sc.nextInt();
+        int m2 = sc.nextInt();
+        int m3 = sc.nextInt();
+
+        int total = m1 + m2 + m3;
+        double average = total/3.0;
+
+        System.out.println("Total marks = " + total);
+        System.out.println("Average marks = " + average);
+    }
+}
+
+OUTPUT:
+
+Enter marks of three subjects: 80 70 90
+Total marks = 240
+Average marks = 80
+
+Q8.Read the total number of days and convert it into years, weeks, and remaining days.
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter total number of days: ");
+        int totalDays = sc.nextInt();
+
+        int years = totalDays / 365;
+        int remainingDays = totalDays % 365;
+        int weeks = remainingDays / 7;
+        int days = remainingDays % 7;
+
+        System.out.println("Years = " + years);
+        System.out.println("Weeks = " + weeks);
+        System.out.println("Remaining days = " + days);
+    }
+}
+
+OUTPUT:
+
+Enter total number of days: 400
+Years = 1
+Weeks = 5
+Remaining days = 0
+
+Q9. Read two numbers and swap them using a third variable.
+Print them before and after swapping.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter two numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+}
+
+OUTPUT:
+
+Enter two numbers: 10
+20
+Before swapping: a = 10, b = 20
+After swapping: a = 20, b = 10
+
+SECTION 2: STRING PROGRAMS
+
+Q10. Read a string and print its length,uppercase form, and lowercase form.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        System.out.println("Length = " + str.length());
+        System.out.println("Uppercase = " + str.toUpperCase());
+        System.out.println("Lowercase = " + str.toLowerCase());
+    }
+}
+
+OUTPUT:
+
+Enter a string: Hello Ravi
+Length = 10
+Uppercase = HELLO RAVI
+Lowercase = hello ravi
+
+Q11. Read a string and print its first character,last character, and the character at position 3.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        System.out.println("First character = " + str.charAt(0));
+        System.out.println("Last character = " + str.charAt(str.length() - 1));
+        System.out.println("Third character = " + str.charAt(2));
+    }
+}
+
+OUTPUT:
+
+Enter a string: HELLO
+
+First character = H
+Last character = O
+Third character = L
+
+Q12. Read two strings and print whether they are equal,ignoring case.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String first = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String second = sc.nextLine();
+
+        if (first.equalsIgnoreCase(second)) {
+            System.out.println("Both strings are equal.");
+        } else {
+            System.out.println("Both strings are not equal.");
+        }
+    }
+}
+
+OUTPUT:
+
+Enter first string: Hello
+Enter second string: HELLO
+
+Both strings are equal.
+
+Q13. Read a string and print it in reverse using a loop.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        System.out.print("Reversed string = ");
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            System.out.print(str.charAt(i));
+        }
+
+        System.out.println();
+    }
+}
+
+OUTPUT:
+
+Enter a string: HELLO
+Reversed string = OLLEH
+
+Q14. Read a sentence and count the number of vowels in it.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String sentence = sc.nextLine().toLowerCase();
+
+        int count = 0;
+
+        for (int i = 0; i < sentence.length(); i++) {
+            char ch = sentence.charAt(i);
+
+            if (ch == 'a' || ch == 'e' || ch == 'i' ||
+                ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+
+        System.out.println("Number of vowels = " + count);
+    }
+}
+
+OUTPUT:
+
+Enter a sentence: Hello World
+Number of vowels = 3
+
+Q15. Read a first name and a last name and print the full name and its initials.
+Example: Ravi Kumar → R.K.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first name: ");
+        String firstName = sc.nextLine();
+
+        System.out.print("Enter last name: ");
+        String lastName = sc.nextLine();
+
+        String fullName = firstName + " " + lastName;
+
+        String initials = firstName.charAt(0) + "." +
+                          lastName.charAt(0) + ".";
+
+        System.out.println("Full name = " + fullName);
+        System.out.println("Initials = " + initials);
+    }
+}
+
+OUTPUT:
+
+Enter first name: Ravi
+Enter last name: Kumar
+Full name = Ravi Kumar
+Initials = R.K.
+
+SECTION 3: ARRAY PROGRAMS
+
+Q16. Read 5 numbers into an array and print them in the same order and in reverse order.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] numbers = new int[5];
+
+        System.out.println("Enter 5 numbers:");
+
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        System.out.print("Same order: ");
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+
+        System.out.print("\nReverse order: ");
+
+        for (int i = 4; i >= 0; i--) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}
+
+OUTPUT:
+
+Enter 5 numbers:
+10
+20
+30
+40
+50
+Same order: 10 20 30 40 50
+Reverse order: 50 40 30 20 10
+
+Q17. Read n numbers into an array and print their sum and average.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+
+        int[] numbers = new int[n];
+        int sum = 0;
+
+        System.out.println("Enter " + n + " numbers:");
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+            sum = sum + numbers[i];
+        }
+
+        double average = (double) sum / n;
+
+        System.out.println("Sum = " + sum);
+        System.out.println("Average = " + average);
+    }
+}
+
+OUTPUT:
+
+Enter the number of elements: 5
+Enter 5 numbers:
+10
+20
+30
+40
+50
+Sum = 150
+Average = 30.0
+
+Q18. Write a Java program to find the largest and smallest elements in an array.
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Please enter a positive number.");
+            return;
+        }
+
+        int[] numbers = new int[n];
+
+        System.out.println("Enter " + n + " numbers:");
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        int largest = numbers[0];
+        int smallest = numbers[0];
+
+        for (int i = 1; i < n; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+
+            if (numbers[i] < smallest) {
+                smallest = numbers[i];
+            }
+        }
+
+        System.out.println("Largest = " + largest);
+        System.out.println("Smallest = " + smallest);
+    }
+}
+
+OUTPUT:
+
+Enter the number of elements: 5
+Enter 5 numbers:
+12
+4
+25
+7
+9
+Largest = 25
+Smallest = 4
+
+SECTION 4: ABSTRACT CLASS
+
+Q19. Write a Java program using an abstract class with at least three child classes.
+
+abstract class Vehicle {
+    String brand;
+
+    Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    void start() {
+        System.out.println(brand + " is starting.");
+    }
+
+    abstract void move();
+}
+
+class Car extends Vehicle {
+    Car(String brand) {
+        super(brand);
+    }
+
+    void move() {
+        System.out.println(brand + " is moving on the road.");
+    }
+}
+
+class Bicycle extends Vehicle {
+    Bicycle(String brand) {
+        super(brand);
+    }
+
+    void move() {
+        System.out.println(brand + " is moving by pedaling.");
+    }
+}
+
+class Boat extends Vehicle {
+    Boat(String brand) {
+        super(brand);
+    }
+
+    void move() {
+        System.out.println(brand + " is moving on water.");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+
+        Vehicle[] vehicles = {
+            new Car("Toyota"),
+            new Bicycle("Hero"),
+            new Boat("Sea Boat")
+        };
+
+        for (Vehicle v : vehicles) {
+            v.start();
+            v.move();
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+
+Toyota is starting.
+Toyota is moving on the road.
+
+Hero is starting.
+Hero is moving by pedaling.
+
+Sea Boat is starting.
+Sea Boat is moving on water.
+
+SECTION 5: INTERFACE
+
+Q20. Write a Java program using an interface with two methods and at least three implementing classes. Add one more class later and show that the main method does not need any change.
+
+interface Switchable {
+    void turnOn();
+    void turnOff();
+}
+
+class Light implements Switchable {
+    public void turnOn() {
+        System.out.println("Light is ON");
+    }
+
+    public void turnOff() {
+        System.out.println("Light is OFF");
+    }
+}
+
+class AC implements Switchable {
+    public void turnOn() {
+        System.out.println("AC is ON");
+    }
+
+    public void turnOff() {
+        System.out.println("AC is OFF");
+    }
+}
+
+class Fan implements Switchable {
+    public void turnOn() {
+        System.out.println("Fan is ON");
+    }
+
+    public void turnOff() {
+        System.out.println("Fan is OFF");
+    }
+}
+
+class Television implements Switchable {
+    public void turnOn() {
+        System.out.println("Television is ON");
+    }
+
+    public void turnOff() {
+        System.out.println("Television is OFF");
+    }
+}
+
+class Main {
+
+    static Switchable[] createDevices() {
+        return new Switchable[] {
+            new Light(),
+            new AC(),
+            new Fan(),
+            new Television()
+        };
+    }
+
+    public static void main(String[] args) {
+
+        Switchable[] devices = createDevices();
+
+        for (Switchable device : devices) {
+            device.turnOn();
+            device.turnOff();
+            System.out.println();
+        }
+    }
+}
+
+OUTPUT:
+
+Light is ON
+Light is OFF
+
+AC is ON
+AC is OFF
+
+Fan is ON
+Fan is OFF
+
+Television is ON
+Television is OFF
+
+SECTION 6: INNER CLASS, STATIC NESTED CLASS & ANONYMOUS INNER CLASS
+
+Q21. Write a Java program to demonstrate Inner Class, Static Nested Class and Anonymous Inner Class
+
+interface Notifier {
+    void sendMessage();
+}
+
+class BankAccount {
+    private double balance;
+
+    BankAccount(double balance) {
+        this.balance = balance;
+    }
+
+    // Inner Class
+    class AccountManager {
+        void showAndAddMoney(double amount) {
+            System.out.println("Old Balance = " + balance);
+
+            balance = balance + amount;
+
+            System.out.println("Updated Balance = " + balance);
+        }
+    }
+
+    // Static Nested Class
+    static class Receipt {
+        void printReceipt() {
+            System.out.println("Receipt printed successfully.");
+        }
+    }
+
+    void notifyCustomer(Notifier notifier) {
+        notifier.sendMessage();
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+
+        BankAccount account = new BankAccount(5000.0);
+
+        // Creating Inner Class object
+        BankAccount.AccountManager manager =
+                account.new AccountManager();
+
+        manager.showAndAddMoney(1500.0);
+
+        // Creating Static Nested Class object
+        BankAccount.Receipt receipt =
+                new BankAccount.Receipt();
+
+        receipt.printReceipt();
+
+        // Anonymous Inner Class
+        Notifier message = new Notifier() {
+            public void sendMessage() {
+                System.out.println("Customer notified successfully.");
+            }
+        };
+
+        account.notifyCustomer(message);
+    }
+}
+
+OUTPUT:
+
+Old Balance = 5000.0
+Updated Balance = 6500.0
+Receipt printed successfully.
+Customer notified successfully.
+
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
